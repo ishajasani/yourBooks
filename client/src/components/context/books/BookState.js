@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import bookContext from "./bookContext";
 
 const BookState = ({ children }) => {
-  const host = "http://localhost:8000";
+  const host = "http://127.0.0.1:8000";
   const [books, setBooks] = useState([]);
 
   // Get all books
@@ -12,7 +12,7 @@ const BookState = ({ children }) => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": "your-auth-token-here",
+          "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjc4OWRlZGVjNGE1ODcwNjBiMjMwYjY3In0sImlhdCI6MTczNzEwODMwMn0.nTX1E8j3Zgt7rYoNbOWsgTPiD13VtlQwcccl-ZE8eQw",
         },
       });
       const data = await response.json();
@@ -29,12 +29,12 @@ const BookState = ({ children }) => {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": "your-auth-token-here",
+          "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjc4OWRlZGVjNGE1ODcwNjBiMjMwYjY3In0sImlhdCI6MTczNzEwODMwMn0.nTX1E8j3Zgt7rYoNbOWsgTPiD13VtlQwcccl-ZE8eQw",
         },
         body: JSON.stringify({ title, description, tag }),
       });
       const book = await response.json();
-      setBooks(books.concat(book));
+      setBooks([...books, book]);
     } catch (error) {
       console.error("Error adding book:", error);
     }
@@ -47,7 +47,7 @@ const BookState = ({ children }) => {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": "your-auth-token-here",
+          "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjc4OWRlZGVjNGE1ODcwNjBiMjMwYjY3In0sImlhdCI6MTczNzEwODMwMn0.nTX1E8j3Zgt7rYoNbOWsgTPiD13VtlQwcccl-ZE8eQw",
         },
         body: JSON.stringify({ title, description, tag }),
       });
@@ -69,7 +69,7 @@ const BookState = ({ children }) => {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": "your-auth-token-here",
+          "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjc4OWRlZGVjNGE1ODcwNjBiMjMwYjY3In0sImlhdCI6MTczNzEwODMwMn0.nTX1E8j3Zgt7rYoNbOWsgTPiD13VtlQwcccl-ZE8eQw",
         },
       });
       setBooks(books.filter((book) => book._id !== id));

@@ -12,7 +12,7 @@ router.post(
     fetchUser,
     [
       body("title", "Enter a valid title").isLength({ min: 2 }),
-      body("description", "Description must be longer than 10 characters").isLength({ min: 10 }),
+      body("description", "Description must be longer than 10 characters").isLength({ min: 2 }),
     ],
     async (req, res) => {
       try {

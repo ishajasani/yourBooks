@@ -3,9 +3,7 @@ import Books from "../Books/Books";
 
 const Home = ({ showAlert }) => (
   <div>
-    <Books 
-    // showAlert={showAlert} 
-    />
+    <Books showAlert={showAlert} />
   </div>
 );
 

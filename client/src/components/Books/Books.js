@@ -4,7 +4,7 @@ import BookItem from "./BookItem";
 import AddBook from "./AddBook";
 
 const Books = ({ showAlert }) => {
-  const { books, getBooks } = useContext(bookContext);
+  const { books, getBooks , editBook} = useContext(bookContext);
   const [book, setBook] = useState({
     id: "",
     etitle: "",
@@ -35,16 +35,16 @@ const Books = ({ showAlert }) => {
   };
 
   const handleClick = (e) => {
+    console.log("updating book..",book);
+    editBook(book.id, book.etitle, book.edescription, book.etag);
     e.preventDefault();
-    refClose.current.click();
     showAlert("Book updated successfully", "success");
+    refClose.current.click(); 
   };
 
   return (
     <div className="container-fluid px-4">
-      <AddBook 
-    //   showAlert={showAlert} 
-      />
+      <AddBook showAlert={showAlert} />
 
       {/* Edit Modal Button */}
       <button
@@ -194,12 +194,12 @@ const Books = ({ showAlert }) => {
         ) : (
           <div className="row g-4">
             {books.map((book) => (
-              <BookItem
+            <BookItem
                 key={book._id}
                 updateBook={updateBook}
                 book={book}
-                showAlert={showAlert}
-              />
+             showAlert={showAlert}
+            />
             ))}
           </div>
         )}

@@ -39,22 +39,6 @@ const BookItem = ({ book, updateBook, showAlert }) => {
           }}>
             {book.description}
           </p>
-          
-          <div className="mt-auto">
-            <hr className="my-2" />
-            <div className="d-flex justify-content-between align-items-center">
-              <small className="text-muted">
-                <i className="fa-solid fa-book-open me-1"></i>
-                Book ID: {book._id.slice(-4)}
-              </small>
-              <button 
-                className="btn btn-outline-primary btn-sm"
-                onClick={() => {/* Add view details functionality */}}
-              >
-                View Details
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </div>
