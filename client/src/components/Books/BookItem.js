@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import bookContext from "../../context/books/bookContext";
+import bookContext from "../context/books/bookContext";
 
 const BookItem = ({ book, updateBook, showAlert }) => {
   const { deleteBook } = useContext(bookContext);

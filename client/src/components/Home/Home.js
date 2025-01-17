@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import Books from "../Books/Books";
 
-const Home = () => {
-  return (
-    <div>
-      this is home
-    </div>
-  )
-}
+const Home = ({ showAlert }) => (
+  <div>
+    <Books 
+    // showAlert={showAlert} 
+    />
+  </div>
+);
 
-export default Home
+export default Home;
