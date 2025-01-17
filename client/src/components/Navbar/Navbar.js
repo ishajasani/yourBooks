@@ -28,22 +28,12 @@ const Navbar = () => {
             <li className="nav-item">
               <Link
                 className={`nav-link px-3 ${
-                  location.pathname === "/home" ? "active fw-semibold" : ""
+                  location.pathname === "/" ? "active fw-semibold" : ""
                 }`}
                 aria-current="page"
                 to="/home"
               >
                 Home
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className={`nav-link px-3 ${
-                  location.pathname === "/about" ? "active fw-semibold" : ""
-                }`}
-                to="/about"
-              >
-                About
               </Link>
             </li>
           </ul>
