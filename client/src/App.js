@@ -4,8 +4,8 @@ import Home from "./components/Home/Home";
 import Navbar from "./components/Navbar/Navbar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import BookState from "./components/context/books/BookState";
-// import Login from "./components/Login/Login";
-// import Signup from "./components/Signup/Signup";
+import Login from "./components/Auth/Login/Login";
+import Signup from "./components/Auth/Signup/Signup";
 import { useState } from "react";
 import Alert from "./components/Alert/Alert";
 
@@ -26,8 +26,8 @@ const App = () => {
           <Routes>
             <Route path="/home" element={<Home showAlert={showAlert} />} />
             {/* <Route path="/about" element={<About />} /> */}
-            {/* <Route path="/login" element={<Login showAlert={showAlert} />} /> */}
-            {/* <Route path="/signup" element={<Signup showAlert={showAlert} />} /> */}
+            <Route path="/login" element={<Login showAlert={showAlert} />} />
+            <Route path="/signup" element={<Signup showAlert={showAlert} />} />
           </Routes>
         </div>
       </Router>
