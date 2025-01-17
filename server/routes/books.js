@@ -92,5 +92,28 @@ router.post(
       res.status(500).json({ error: "Internal Server Error: Some error occurred" });
     }
   });
+
+  // ROUTE 4: Delete an existing book - DELETE "/api/notes/deletebook/:id". Login required
+router.delete("/deletebook/:id", fetchUser, async (req, res) => {
+    try {
+      // Find the book to be deleted
+      const book = await Book.findById(req.params.id);
+      if (!book) {
+        return res.status(404).json({ error: "Note not found" });
+      }
+  
+      // Check if user owns the book
+      if (book.user.toString() !== req.userId) {
+        return res.status(401).json({ error: "Unauthorized" });
+      }
+
+      // Delete the book
+      await Book.findByIdAndDelete(req.params.id);
+      res.json({ success: true, msg: "Note has been deleted" });
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).json({ error: "Internal Server Error: Some error occurred" });
+    }
+  });
   
 export default router;
