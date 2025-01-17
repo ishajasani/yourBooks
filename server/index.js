@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
 import authRoutes from "./routes/auth.js";
-// import bookRoutes from './routes/books.js';
+import bookRoutes from './routes/books.js';
 
 dotenv.config();
 
@@ -32,7 +32,7 @@ const corsOptions = {
 server.use(cors(corsOptions));
 server.use(express.json());
 server.use("/api/auth", authRoutes);
-// server.use('/api/books', bookRoutes);
+server.use('/api/books', bookRoutes);
 
 const port = process.env.PORT || 8000;
 
