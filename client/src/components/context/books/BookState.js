@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import bookContext from "./bookContext";
 
 const BookState = ({ children }) => {
-  const host = "http://127.0.0.1:8000";
+  const host = process.env.React_App_BACKEND_HOST;
+  const token = process.env.AUTH_TOKEN;
   const [books, setBooks] = useState([]);
 
   // Get all books
@@ -12,7 +13,7 @@ const BookState = ({ children }) => {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "auth-token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjc4OWRlZGVjNGE1ODcwNjBiMjMwYjY3In0sImlhdCI6MTczNzEwODMwMn0.nTX1E8j3Zgt7rYoNbOWsgTPiD13VtlQwcccl-ZE8eQw",
+          "auth-token": token,
         },
       });
       const data = await response.json();

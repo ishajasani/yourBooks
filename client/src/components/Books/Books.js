@@ -173,7 +173,7 @@ const Books = ({ showAlert }) => {
         <div className="d-flex justify-content-between align-items-center mb-4">
           <h2 className="text-primary mb-0">
             <i className="fa-solid fa-books me-2"></i>
-            Your Books
+            Books you have listed
           </h2>
           <div className="d-flex gap-2 align-items-center">
             <span className="text-muted">Total Books: {books.length}</span>
