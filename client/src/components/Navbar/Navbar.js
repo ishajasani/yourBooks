@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
       <div className="container d-flex justify-content-center">
-        <Link className="navbar-brand fw-bold text-primary fs-4" to="/">
+        <Link className="navbar-brand fw-bold text-primary fs-4" to="/home">
           yourBooks
         </Link>
 
