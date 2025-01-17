@@ -40,4 +40,15 @@ router.post(
     }
   );
 
+  // ROUTE 2: Get all notes - GET "/api/notes/fetchallnotes". Login required
+    router.get("/fetchallbooks", fetchUser, async (req, res) => {
+    try {
+      const books = await Book.find({ user: req.userId });
+      res.json(books);
+    } catch (error) {
+      console.error(error.message);
+      res.status(500).json({ error: "Internal Server Error: Some error occurred" });
+    }
+  });
+
 export default router;
