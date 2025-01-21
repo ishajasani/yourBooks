@@ -25,25 +25,21 @@ YourBooks is a web application for managing books efficiently. This platform all
 
 ---
 
-## **Screenshots and Videos**
+## **Screenshots and Demo Videos**
 ### **1. Home Page and view books page**
 ![Uploading Screenshot 2025-01-21 at 1.36.58 PM.png…]()
 
 ### **2. Add new book**
-- Adding a new book
-<img width="1299" alt="image" src="https://github.com/user-attachments/assets/270be668-959d-4c80-82b7-211004efc1e9" />
-- After adding the book
-<img width="1299" alt="image" src="https://github.com/user-attachments/assets/04c0ee57-6be9-4413-99ca-1aa4f278ef8d" />
-- The update in the database
-<img width="1325" alt="image" src="https://github.com/user-attachments/assets/2b0cbf10-1a7d-4744-9b46-66b05355d8f3" />
+https://github.com/user-attachments/assets/8c235488-8f86-467e-9b88-145e72125252
 
 ### **3. Update a book**
-
+https://github.com/user-attachments/assets/281a9d65-d435-42c5-a1e9-3f966929e530
 
 ### **4. Delete a book**
-- Database before deleting the book short stories222
-<img width="1325" alt="image" src="https://github.com/user-attachments/assets/b5393856-47da-4990-ba9d-b0281f4ff365" />
-- <img width="1325" alt="image" src="https://github.com/user-attachments/assets/9450992a-38ea-4b60-99b1-7f16c1b017e4" />
+https://github.com/user-attachments/assets/b93c2aed-6281-49aa-9858-2732042d4c94
+
+
+
 
 
 
