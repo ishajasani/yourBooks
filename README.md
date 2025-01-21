@@ -1,4 +1,4 @@
-# **YourBooks**
+![Screenshot 2025-01-21 at 1 36 58 PM](https://github.com/user-attachments/assets/930342ee-122f-4fed-8564-953d84595198)# **YourBooks**
 YourBooks is a web application for managing books efficiently. This platform allows users to create, read, update, and delete (CRUD) book records while offering an intuitive interface and seamless user experience. 
 
 ---
@@ -27,7 +27,7 @@ YourBooks is a web application for managing books efficiently. This platform all
 
 ## **Screenshots and Demo Videos**
 ### **1. Home Page and view books page**
-![Uploading Screenshot 2025-01-21 at 1.36.58 PM.png…]()
+![Screenshot 2025-01-21 at 2 54 58 PM](https://github.com/user-attachments/assets/24bb1f5d-838c-4bb4-b432-0b66eea32668)
 
 ### **2. Add new book**
 https://github.com/user-attachments/assets/8c235488-8f86-467e-9b88-145e72125252
